@@ -1,0 +1,100 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+    <title>회원가입!</title>
+</head>
+
+<body>
+    <section class="signup-form">
+        <h1>GOODJOB! 환영합니다!</h1>
+
+
+        <form method="POST" enctype="multipart/form-data">
+
+
+
+            <p class="imgbox">
+
+            </p>
+
+            <form method="post" action="upload" enctype="multipart/form-data">
+
+                <div>
+                    이력서 사진 넣기 : <input type="file" name="file" accept="image/*">
+                </div>
+            </form>
+
+            <br><br>
+            100자 이력서 작성하기 : <input type="text" style="width:350px">
+
+            <br><br>
+            이름 :<input type="text">
+            <br><br>
+            생년월일 :<input type="date">
+            <br><br>
+            ID :<input type="id">
+            <br><br>
+            비밀번호 :<input type="password">
+            <br><br>
+            비밀번호 확인 :<input type="password">
+            <br><br>
+            주소:<input type="search">
+            <button>검색</button>
+
+            <br><br>
+            전화번호 :<input type="tel">
+            <br><br>
+            경력이 있는 분야 :
+            <div class="field">
+                <input type="checkbox">사무<input type="checkbox">경비
+                <input type="checkbox">기술<input type="checkbox">생산
+            </div>
+            <br>
+
+            관심있는 분야 :
+            <div>
+                <input type="checkbox">사무
+                <input type="checkbox">경비
+                <input type="checkbox">기술
+                <input type="checkbox">생산
+            </div>
+            <br>
+            <button type="submit">가입하기</button>
+
+
+
+
+        </form>
+
+
+    </section>
+
+
+
+    <footer></footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
