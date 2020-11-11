@@ -7,4 +7,4 @@ class MemoForm(ModelForm):
 
     class Meta:
         model = Firstapp
-        fields = ("company",'address','URL','pic',"telephone",'representative') 
+        fields = ("company",'address','URL','pic',"telephone",'representative','business','volume','advantage','type','money','grade','diversification','career','time','content','etc') 

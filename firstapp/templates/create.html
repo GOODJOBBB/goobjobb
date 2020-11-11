@@ -1,3 +1,4 @@
+{% block contents %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
     <title>글쓰기 페이지입니다.</title>
 </head>
 <body>
-    <form method="POST" enctype="multipart/form-data"></form>
+    <form method="POST" enctype="multipart/form-data">
     <div calss="container board info_company-group">
         {% csrf_token %}
         <blockquote>
@@ -19,9 +20,7 @@
             </h3>
         </blockquote>
         <div class="Cinfo_logo">
-            {% if i.pic %}
-            <p><img src="{{i.pic.url}} alt="logo"></p>
-            {%endif%}
+            <p><input type="file" name="pic"/></p>
         </div>
         <div class="Cinfo_name">
             <h3>기업이름 : <input type="text" name="company"/></h3>
@@ -51,7 +50,7 @@
                     </tr>
                     <tr>
                         <th>업종</th>
-                        <td colspan="3"><input type="text" name="업종"/></td>
+                        <td><input type="text" name="business"/></td>
                     </tr>
                 </tbody>
             </table>
@@ -72,37 +71,36 @@
             <tbody>
                 <tr>
                     <th>모집인원</th>
-                    <td>00</td>
+                    <td><input type="text" name="volume"/></td>
                     <th>복리후생</th>
-                    <td>4대보험</td>
+                    <td><input type="text" name="advantage"/></td>
                 </tr>
                 <tr>
                     <th>모집직종</th>
-                    <td>생산직</td>
+                    <td><input type="text" name="type"/></td>
                     <th>급여</th>
-                    <td>월급 200만원 이상</td>
+                    <td><input type="text" name="money"/></td>
                 </tr>
                 <tr>
                     <th>학력</th>
-                    <td>무관</td>
+                    <td><input type="text" name="grade"/></td>
                     <th>고용형태</th>
-                    <td>정규직</td>
+                    <td><input type="text" name="diversification"/></td>
                 </tr>
                 <tr>
                     <th>경력</th>
-                    <td>무관</td>
+                    <td><input type="text" name="career"/></td>
                     <th>근무시간</th>
-                    <td>08:00 ~ 17:00</td>
+                    <td><input type="text" name="time"/></td>
                 </tr>
                 <tr>
                     <th>직무내용</th>
-                    <td colspan="3" class="text-left">생산업무</td>
+                    <td><input type="text" name="content"/></td>
                 </tr>
                 <tr>
                     <th>기타</th>
-                    <td colspan="3" class="text-left">
-                        면접일:
-                        주5일근무
+                    <td>
+                        <input type="text" name="etc"/>
                     </td>
                 </tr>                                
             </tbody>
@@ -113,3 +111,4 @@
     </form>
 </body>
 </html>
+{%endblock%}

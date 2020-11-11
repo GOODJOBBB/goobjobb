@@ -42,26 +42,24 @@
         <div id="main" class="my">
             <span>전체보기</span>
             <div class="contents">
+               
+                {% for i in all_memo %}
                 <div class="box">
                     <a href=""> </a>
                     {% if i.pic %}
                     <img src="{{i.pic.url}}" alt="logo">
                     {% endif %}
-                    <h3>{{i.company}}</h3>
-                    <p>함께 일하실 분 모집합니다.</p>
+                    <a href="{% url 'detail' i.id %}"><h3>{{i.company}}</h3></a>
+                
+                    <p>{{i.etc}}</p>
                 </div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
+                {%endfor%}
             </div>
+
+
         </div>
-        <footer id="footer"></footer>
+      </div>
+    <footer id="footer"></footer>
     </div>
 
 
