@@ -1,43 +1,44 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <script src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
     <title>main</title>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
             <span id="logo">일하JOB</span>
-            <div>
-                <button class="btn_login">로그인</button>
-                <button class="btn_join">회원가입</button>
-                <a href="{% url 'create' %}">글쓰기</a>
-            </div>
+
         </header>
         <div class="mypage">
             <div class="mytop">
                 <div class="myimg">
                     <img src="image/i-17.jpg" alt="">
                 </div>
+                <br>
                 <!-- nav로 해야됌? 뭘로할까 -->
                 <div class="myinfo">
                     <ul>
-                        <li><a href="">회원정보</a></li>
-                        <li><a href="">정보수정</a></li>
+                        <a href="{% url 'log' %}"> <button class="btn_login">[개인]로그인</button> </a>
+                        <a href="{% url 'log' %}"> <button class="btn_join">[기업]로그인</button></a>
+
                     </ul>
+                    <a href="{% url 'signup' %}"><button type="submit">회원가입</button></a>
+
                 </div>
+                <br>
+
+
+
             </div>
-            <div class="mystate">
-                <p>지원현황</p>
-                <ul>
-                    <li>-</li>
-                </ul>
-            </div>
+
         </div>
         <div id="main" class="my">
             <span>전체보기</span>
@@ -65,4 +66,5 @@
 
     <footer></footer>
 </body>
+
 </html>

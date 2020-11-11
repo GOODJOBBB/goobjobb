@@ -29,3 +29,15 @@ def create(request):
         else:
             context['memoform']=myform
     return render(request, 'create.html',context)
+
+
+def log(request):
+    context = dict()
+    request.POST.get('mydata')
+    return render(request, 'log.html',context)    
+
+
+def signup(request):
+    context = dict()
+    request.POST.get('mydata')
+    return render(request, 'signup.html',context)    
